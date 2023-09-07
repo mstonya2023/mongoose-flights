@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<h1>Flights List</h1>
+
+
+<% if (flights.length) { %>
+    <% flights.forEach(function(f) {  %>
+        <div>
+            <p>Airline: <%= f.airline %></p>
+            <p>Airport: <%= f.airport %></p>
+            <p>Flight No: <%= f.flightNo %></p>
+            <p>Departs: <%= f.departs %></p>
+        </div>
+        <hr>
+    <% }); %>
+<% } else { %>
+    <h3>No Flight Yet</h3>
+<% } %>
+
+
+<%- include('../partials/footer') %>
